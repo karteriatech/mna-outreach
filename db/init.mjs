@@ -2,7 +2,8 @@
 // Run once after setting DATABASE_URL:  npm run db:init
 import "dotenv/config";
 import { readFileSync } from "node:fs";
-import { Pool } from "pg";
+import pkg from "pg";
+const { Pool } = pkg;
 
 const TENANT = process.env.DEFAULT_TENANT_ID || "00000000-0000-0000-0000-000000000001";
 
